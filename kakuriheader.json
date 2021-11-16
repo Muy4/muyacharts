@@ -1,0 +1,5 @@
+﻿{
+"name" : "かに隔離差分難易度表",
+"symbol" : "≧[ﾟ ﾟ]≦",
+"data_url" : "http://kanisabun.gozaru.jp/kakuriscore.json",
+"level_order" : [1,2,3,4,"!?"]}
