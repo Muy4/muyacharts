@@ -1,48 +1,47 @@
-<meta charset="utf-8">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
 <head>
-<title>ã‹ã«éš”é›¢å·®åˆ†é›£æ˜“åº¦è¡¨</title>
+<title>‚©‚ÉŠu—£·•ª“ïˆÕ“x•\</title>
 <meta http-equiv="Content-Script-Type" content="text/javascript" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
-<meta name="bmstable" content="./kakuriheader.json" /> <!--ã€€èª­ã¿è¾¼ã‚€é›£æ˜“åº¦è¡¨ã®ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã“ã“ã«æŒ‡å®šã€€-->
+<meta name="bmstable" content="./kakuriheader.json" /> <!--@“Ç‚İ‚Ş“ïˆÕ“x•\‚Ìƒwƒbƒ_ƒtƒ@ƒCƒ‹‚ğ‚±‚±‚Éw’è@-->
 <link href="style/style.css" rel="stylesheet" type="text/css" media="screen,print" />
 <script src="style/jquery-2.0.2.min.js"></script>
 
 <body>
 
 <center>
-<strong><span style="font-size: 24pt;">ã‹ã«éš”é›¢å·®åˆ†é›£æ˜“åº¦è¡¨</span></strong><br>
-<a href="index.html">TOPã«æˆ»ã‚‹</a><br>
+<strong><span style="font-size: 24pt;">‚©‚ÉŠu—£·•ª“ïˆÕ“x•\</span></strong><br>
+<a href="index.html">TOP‚É–ß‚é</a><br>
 <br>
 <table border=1>
 <tr>
-<td>ã‹ã«å·®åˆ†</td><td>ç™ºç‹‚è¡¨</td>
+<td>‚©‚É·•ª</td><td>”­‹¶•\</td>
 </tr>
-<td>â‰§[ï¾Ÿ ï¾Ÿ]â‰¦1</td><td>â˜…01~09</td>
+<td>†[ß ß]…1</td><td>š01~09</td>
 </tr>
-<td>â‰§[ï¾Ÿ ï¾Ÿ]â‰¦2</td><td>â˜…10~14</td>
+<td>†[ß ß]…2</td><td>š10~14</td>
 </tr>
-<td>â‰§[ï¾Ÿ ï¾Ÿ]â‰¦3</td><td>â˜…15~19</td>
+<td>†[ß ß]…3</td><td>š15~19</td>
 </tr>
-<td>â‰§[ï¾Ÿ ï¾Ÿ]â‰¦4</td><td>â˜…20ä»¥ä¸Š</td>
+<td>†[ß ß]…4</td><td>š20ˆÈã</td>
 </tr>
 </table>
 <br>
-<a href="kanitable.html">æœ¬é›£æ˜“åº¦è¡¨ã¸</a><br>
+<a href="kanitable.html">–{“ïˆÕ“x•\‚Ö</a><br>
 </center>
-<!--ã€€ã€€ã€€ã€€ã€€ã“ã“ã‹ã‚‰é›£æ˜“åº¦è¡¨æœ¬ä½“ã€€ã€€ã€€ã€€ã€€-->
+<!--@@@@@‚±‚±‚©‚ç“ïˆÕ“x•\–{‘Ì@@@@@-->
 <div class="tableflame">
-<table align="center" cellspacing="1" cellpadding=2ã€€border="0" bgcolor="#000000" id="table_int">
+<table align="center" cellspacing="1" cellpadding=2@border="0" bgcolor="#000000" id="table_int">
 </table>
 </div>
 
 <script language="javascript" type="text/javascript">
 
-// ãƒ¡ãƒ‹ãƒ¥ãƒ¼é–‹é–‰
+// ƒƒjƒ…[ŠJ•Â
 function menu(tName){
 	var tMenu = document.getElementById(tName).style;
 	if (tMenu.display == 'none'){
@@ -56,7 +55,7 @@ function menu(tName){
 $(document).ready(function(){
 	$.getJSON($("meta[name=bmstable]").attr("content"), function(header){
 		$.getJSON(header.data_url, function(information){
-			// headerã®sortæœ‰ç„¡ã§åˆ†å²
+			// header‚Ìsort—L–³‚Å•ªŠò
 			if(header["level_order"]){
 				makeBMSTable(information,header.symbol,header["level_order"]);
 			} else {
@@ -67,9 +66,9 @@ $(document).ready(function(){
 });
 
 
-// ã‚½ãƒ¼ãƒˆã®ãŸã‚ã®å¼•æ•°è¿½åŠ 
+// ƒ\[ƒg‚Ì‚½‚ß‚Ìˆø”’Ç‰Á
 function makeBMSTable(info, mark, order) {
-	// orderãŒæœªæŒ‡å®šã®å ´åˆã¯null
+	// order‚ª–¢w’è‚Ìê‡‚Ínull
 	if(typeof order === 'undefined'){
 		order = null;
 	}
@@ -79,9 +78,9 @@ function makeBMSTable(info, mark, order) {
     var count = 0;
     var obj = $("#table_int");
 
-	// ã‚½ãƒ¼ãƒˆ
+	// ƒ\[ƒg
 	if(order != "" && order != null){
-		// herder.jsonã«sortãŒå­˜åœ¨ã™ã‚‹å ´åˆã¯æŒ‡å®šé †->ã‚¿ã‚¤ãƒˆãƒ«é †ã«ã‚½ãƒ¼ãƒˆ
+		// herder.json‚Ésort‚ª‘¶İ‚·‚éê‡‚Íw’è‡->ƒ^ƒCƒgƒ‹‡‚Éƒ\[ƒg
 		
 		var orderAry = [];
 		for(var l = 0; l < order.length; l++){
@@ -103,14 +102,14 @@ function makeBMSTable(info, mark, order) {
 			} else if( a["title"].toLowerCase() > b["title"].toLowerCase() ){
 				return 1;
 			} else {
-	ã€€	ã€€ã€€	return 0;
+	@	@@	return 0;
 			}
 		});
 		for(var k=0; k < info.length; k++){
 			delete info[k]["_index"];
 		}
 	} else {
-		// ãã†ã§ãªã„å ´åˆã¯ãƒ¬ãƒ™ãƒ«é †->ã‚¿ã‚¤ãƒˆãƒ«é †ã«ã‚½ãƒ¼ãƒˆ
+		// ‚»‚¤‚Å‚È‚¢ê‡‚ÍƒŒƒxƒ‹‡->ƒ^ƒCƒgƒ‹‡‚Éƒ\[ƒg
 		info.sort(
 			function(a,b){
 				var aLv = a["level"].toString();
@@ -126,29 +125,29 @@ function makeBMSTable(info, mark, order) {
 				} else if( a["title"].toLowerCase() > b["title"].toLowerCase() ){
 					return 1;
 				} else {
-		ã€€	ã€€ã€€	return 0;
+		@	@@	return 0;
 				}
 			}
 		);
 	}
 	
-    // è¡¨ã®ã‚¯ãƒªã‚¢
+    // •\‚ÌƒNƒŠƒA
     obj.html("");
-    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>å‹•ç”»</td><td align='center'>è­œé¢</td><td align='center'>ã‚¿ã‚¤ãƒˆãƒ«</td><td align='center'>æœ¬ä½“</td><td align='center'>å·®åˆ†</td><td align='center'>ã‚³ãƒ¡ãƒ³ãƒˆ</td></tr>").appendTo(obj);
+    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>•ˆ–Ê</td><td align='center'>ƒ^ƒCƒgƒ‹</td><td align='center'>–{‘Ì</td><td align='center'>·•ª</td><td align='center'>ƒRƒƒ“ƒg</td></tr>").appendTo(obj);
     var obj_sep = null;
     for (var i = 0; i < info.length; i++) {
-        // é›£åº¦ã”ã¨ã®åŒºåˆ‡ã‚Š
+        // “ï“x‚²‚Æ‚Ì‹æØ‚è
         if (x != info[i].level) {
-            // å‰ã®åŒºåˆ‡ã‚Šã«è­œé¢æ•°ã€å¹³å‡å¯†åº¦ã‚’è¿½åŠ 
+            // ‘O‚Ì‹æØ‚è‚É•ˆ–Ê”A•½‹Ï–§“x‚ğ’Ç‰Á
           	if (obj_sep != null) {
-                obj_sep.html("<td colspan='7' align='center'>" + "<b>" + mark + x + " (" + count + "è­œé¢)</b></td>");
+                obj_sep.html("<td colspan='7' align='center'>" + "<b>" + mark + x + " (" + count + "•ˆ–Ê)</b></td>");
             }
             obj_sep = $("<tr class='tr_separate' id='" + mark + info[i].level + "'></tr>");
             obj_sep.appendTo(obj);
             count = 0;
             x = info[i].level;
         }
-        // æœ¬æ–‡
+        // –{•¶
         var str = $("<tr class='tr_normal'></tr>");
 
         if(info[i].state == 1) {
@@ -171,27 +170,15 @@ function makeBMSTable(info, mark, order) {
 
         }
 
-        // ãƒ¬ãƒ™ãƒ«è¡¨è¨˜
+        // ƒŒƒxƒ‹•\‹L
         $("<td width='6%'>" + mark + x + "</td>").appendTo(str);
-        // å‹•ç”»
-		if(info[i].video1 != "" && info[i].video1 != null){
-			// ãƒ‹ã‚³ãƒ‹ã‚³
-			$("<td width='1%' align='center'><a href='http://www.nicovideo.jp/watch/sm" + info[i].video1 + "' target='_blank'><img src='style/nico.gif' border='0' alt='ãƒ‹ã‚³ãƒ‹ã‚³å‹•ç”»' /></a></td>").appendTo(str);
-		} else if(info[i].video2 != "" && info[i].video2 != null){
-			// YouTube
-			$("<td width='1%' align='center'><a href='http://www.youtube.com/watch?v=" + info[i].video2 + "' target='_blank'><img src='style/youtube.gif' border='0' alt='Youtube' /></a></td>").appendTo(str);
-		} else if(info[i].video3 != "" && info[i].video3 != null){
-			// vimeo
-			$("<td width='1%' align='center'><a href='http://vimeo.com/" + info[i].video3 + "' target='_blank'><img src='style/vimeo.gif' border='0' alt='vimeo' /></a></td>").appendTo(str);
-		} else {
-        	$("<td width='1%'></td>").appendTo(str);
-		}
-ã€€ã€€ã€€ã€€// è­œé¢ç”»åƒ
-ã€€ã€€ã€€ã€€$("<td width='1%' akign='center'><a href='http://www.ribbit.xyz/bms/score/view?p=1&md5=" + info[i].md5 + "' target='_blank'>â– </a></td>").appendTo(str);
 
-        // ã‚¿ã‚¤ãƒˆãƒ«
+@@@@// •ˆ–Ê‰æ‘œ
+@@@@$("<td width='1%' akign='center'><a href='http://www.ribbit.xyz/bms/score/view?p=1&md5=" + info[i].md5 + "' target='_blank'>¡</a></td>").appendTo(str);
+
+        // ƒ^ƒCƒgƒ‹
         $("<td width='20%'>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
-        // ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆ
+        // ƒA[ƒeƒBƒXƒg
         var astr = "";
         if(info[i].url != "" && info[i].url != null) {
         	if(info[i].artist != "" && info[i].artist != null) {
@@ -216,12 +203,12 @@ function makeBMSTable(info, mark, order) {
         	}
         }
         $("<td width='20%'>" + astr + "</td>").appendTo(str);
-        // å·®åˆ†
+        // ·•ª
         if(info[i].url_diff != "" && info[i].url_diff != null) {
         	if(info[i].name_diff != "" && info[i].name_diff != null) {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
+	        $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
         	} else {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
+	        $("<td width='5%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
         	}
         } else {
         	if(info[i].name_diff != "" && info[i].name_diff != null) {
@@ -230,17 +217,17 @@ function makeBMSTable(info, mark, order) {
 	        $("<td width='15%'></td>").appendTo(str);
         	}
         }
-        // ã‚³ãƒ¡ãƒ³ãƒˆ
+        // ƒRƒƒ“ƒg
         $("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         str.appendTo(obj);
         count++;
     }
 
     
-    // æœ€å¾Œã®åŒºåˆ‡ã‚Šå‡¦ç†
-	// ãƒãƒ¼ã‚¯ãŒæŠœã‘è½ã¡ã¦ãŸã®ã§è¿½åŠ 
+    // ÅŒã‚Ì‹æØ‚èˆ—
+	// ƒ}[ƒN‚ª”²‚¯—‚¿‚Ä‚½‚Ì‚Å’Ç‰Á
     if (obj_sep != null) {
-        obj_sep.html("<td colspan='7' align='center'>" + "<b>" + mark + x + " (" + count + "è­œé¢)</b></td>");
+        obj_sep.html("<td colspan='7' align='center'>" + "<b>" + mark + x + " (" + count + "•ˆ–Ê)</b></td>");
     }
 }
 
