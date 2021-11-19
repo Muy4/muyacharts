@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#example').dataTable({
+		"bServerSide": false,
+		"bProcessing": true,
+		"sAjaxDataProp": "feed.entry",
+		"sAjaxSource": "https://spreadsheets.google.com/feeds/list/[keyをここへ]/od6/public/values?alt=json",
+		"aoColumns": [{
+			"mData": "gsx\$series.\$t"
+		}, {
+			"mData": "gsx\$published.\$t"
+		}, {
+			"mData": "gsx\$title.\$t"
+		}, {
+			"mData": "gsx\$media.\$t"
+		}]
+	});
+});
+</script>
+...
+<table id="example" width="100%">
+	<thead>
+		<tr>
+			<th>連載名</th>
+			<th>公開日</th>
+			<th>記事タイトル</th>
+			<th>サイト</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
