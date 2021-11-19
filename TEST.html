@@ -42,7 +42,37 @@ mark { background: gold; color: black; }
 <tr><td>SIGMA</td><td>16mm F1.4 DC DN</td><td>16</td><td>F1.4</td><td>11</td><td>－</td><td>0.25</td><td>0.10</td><td>405</td></tr>
 <tr><td>Zeiss</td><td>Batis 2/40 CF</td><td>40</td><td>F2</td><td>20</td><td>○</td><td>0.24</td><td>0.30</td><td>361</td></tr>
 <tr><td>SONY</td><td>Planar T* FE 50mm F1.4 ZA SEL50F14Z</td><td>50</td><td>F1.4</td><td>36</td><td>○</td><td>0.45</td><td>0.15</td><td>778</td></tr>
-<tr><td>SIGMA</td><td>24mm F3.5 DG DN</td><td>24</td><td>F3.5</td><td>7</td><td>○</td><td>0.108</td><td>0.50</td><td>230</td></tr><link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
+<tr><td>SIGMA</td><td>24mm F3.5 DG DN</td><td>24</td><td>F3.5</td><td>7</td><td>○</td><td>0.108</td><td>0.50</td><td>230</td></tr><link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/><link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
+
+<table id="dataTable" class="display" style="width:100%">
+<thead>
+<tr>・・・・・</tr>
+</thead>
+<tbody>
+・・・・・
+</tbody>
+</table>
+
+<script type="text/javascript">
+$(function() {
+	var table = $('#dataTable').DataTable({
+		language: {	// 日本語化
+			url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+		},
+		paging: false,	// ページングしない。
+		ordering: true,	// ソートする
+		mark: true	// 検索文字列ハイライト (by mark.js)
+	});
+});
+</script>
+
+<style>
+mark { background: gold; color: black; }
+</style>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
