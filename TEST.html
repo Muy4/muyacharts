@@ -1,0 +1,31 @@
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css"/>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
+
+<table id="dataTable" class="display" style="width:100%">
+<thead>
+<tr>・・・・・</tr>
+</thead>
+<tbody>
+・・・・・
+</tbody>
+</table>
+
+<script type="text/javascript">
+$(function() {
+	var table = $('#dataTable').DataTable({
+		language: {	// 日本語化
+			url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+		},
+		paging: false,	// ページングしない。
+		ordering: true,	// ソートする
+		mark: true	// 検索文字列ハイライト (by mark.js)
+	});
+});
+</script>
+
+<style>
+mark { background: gold; color: black; }
+</style>
