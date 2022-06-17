@@ -1,1 +1,83 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Datatable のデモでーす。">
+<title>Datatable - jQuery Plugin Demo</title>
+<link rel="stylesheet" href="css/datatable.css" type="text/css" media="screen" />
+</head>
+<body>
+ 
+<h1>Datatable のデモでーす。</h1>
+<p>タイトルをクリックすると、ソート。</p>
+<table id="demo">
+  <thead>
+  <tr>
+    <th>名前</th>
+    <th>点数</th>
+    <th>評価</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>佐藤</td>
+    <td>100</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>鈴木</td>
+    <td>90</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>高橋</td>
+    <td>80</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>田中</td>
+    <td>70</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>伊藤</td>
+    <td>60</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>渡辺</td>
+    <td>40</td>
+    <td>D</td>
+  </tr>
+  <tr>
+    <td>中村</td>
+    <td>90</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>小林</td>
+    <td>70</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>加藤</td>
+    <td>80</td>
+    <td>A</td>
+  </tr>
+  </tbody>
+</table>
+<div class="paging"></div>
+ 
+<p><a href="https://webkaru.net/jquery-plugin/datatable/">「jQueryプラグインまとめ」に戻る</a></p>
+ 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/datatable.min.js"></script>
+<script>
+$('#demo').datatable({
+  pageSize: 5,
+  sort: [true, true, true],
+  filters: [false, false, 'select']
+});
+</script>
+</body>
+</html>
