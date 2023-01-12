@@ -216,17 +216,16 @@ function makeBMSTable(info, mark, order) {
         	} else {
 	        $("<td width='15%'></td>").appendTo(str);
         	}
-        }
         // コメント
         $("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         str.appendTo(obj);
         count++;
-    }
+        	}
         // 日付
         $("<td width='5%'>" + info[i].day + "</div></td>").appendTo(str);
         str.appendTo(obj);
         count++;
-
+        	}
     
     // 最後の区切り処理
 	// マークが抜け落ちてたので追加
