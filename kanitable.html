@@ -222,6 +222,10 @@ function makeBMSTable(info, mark, order) {
         str.appendTo(obj);
         count++;
     }
+        // 日付
+        $("<td width='5%'>" + info[i].day + "</div></td>").appendTo(str);
+        str.appendTo(obj);
+        count++;
 
     
     // 最後の区切り処理
