@@ -34,6 +34,7 @@
 <br>
 </center>
 <!--　　　　　ここから難易度表本体　　　　　-->
+<table id="sort_table">
 <div class="tableflame">
 <table align="center" cellspacing="1" cellpadding=2　border="0" bgcolor="#000000" id="table_int">
 </table>
@@ -230,7 +231,18 @@ function makeBMSTable(info, mark, order) {
         obj_sep.html("<td colspan='7' align='center'>" + "<b>" + mark + x + " (" + count + "譜面)</b></td>");
     }
 }
-
+<style>
+#sort_table {
+	border-collapse:collapse;
+}
+#sort_table td {
+	border:1px solid lightgray;
+}
+#sort_table th {
+	cursor:pointer;
+	background-color:lightgray;
+}
+</style>
 </script>
 
 </body>
